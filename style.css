@@ -1,4 +1,4 @@
-/* General Body Styles (You should already have this) */
+/* General Body Styles */
 body {
     background-color: #1a1a2e; /* Dark purplish-blue */
     color: #e0e0e0; /* Light grey text */
@@ -23,14 +23,12 @@ body {
     text-align: center;
     padding: 100px 20px;
     position: relative;
-    overflow: hidden; /* Important for future animations */
-    min-height: 500px; /* Ensure sufficient height */
+    overflow: hidden;
+    min-height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-/* Dynamic background idea (pure CSS, more advanced): */
-/* You could add a subtle animation for the background here later using pseudo-elements */
 
 .hero-content {
     z-index: 1; /* Ensure content is above background */
@@ -158,6 +156,94 @@ footer {
     color: #e0e0e0;
 }
 
+/* Blog Page Specific Styles (Updated) */
+.page-header {
+    background-color: #12121e; /* Dark header background */
+    color: #e0e0e0;
+    text-align: center;
+    padding: 60px 20px 30px;
+    border-bottom: 3px solid #00bcd4; /* Accent line */
+}
+
+.blog-posts-section {
+    background-color: #1a1a2e; /* Consistent dark background for blog list section */
+    padding: 60px 0;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid for posts */
+    gap: 30px; /* Space between blog posts */
+    max-width: 1000px; /* Constrain the overall grid width */
+    margin: 0 auto; /* Center the grid */
+    padding: 0 20px; /* Add some padding on smaller screens */
+}
+
+.blog-post {
+    background-color: #2a2a4a; /* Card background */
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+}
+
+.blog-post h3 {
+    color: #00bcd4;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.blog-post .post-meta {
+    font-size: 0.9em;
+    color: #a0a0a0;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #3a3a5a;
+    padding-bottom: 10px;
+}
+
+.blog-post p {
+    margin-bottom: 20px;
+}
+
+.button-small {
+    padding: 8px 15px;
+    font-size: 0.9em;
+}
+
+/* Styles for Individual Blog Post Page (Updated) */
+.single-post-content {
+    background-color: #2a2a4a; /* Consistent background for single post content block */
+    padding: 40px; /* Increased padding for better breathing room */
+    max-width: 800px; /* PRIMARY CHANGE: Constrain the content width for readability */
+    margin: 40px auto; /* Center the content block with some top/bottom margin */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); /* Slightly more prominent shadow */
+}
+
+.single-post-content h4 {
+    color: #00bcd4;
+    font-size: 1.6em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.single-post-content p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.post-meta-single { /* Styling for meta on single post page */
+    font-size: 1em;
+    color: #a0a0a0;
+    margin-bottom: 20px;
+    display: block;
+}
+
 /* Basic Responsiveness (Optional, but good practice for Notepad users) */
 @media (max-width: 768px) {
     .hero h1 {
@@ -181,5 +267,13 @@ footer {
     }
     .about-text {
         text-align: center;
+    }
+    /* Adjust blog grid for smaller screens if needed */
+    .blog-grid {
+        padding: 0 10px; /* Reduce padding on very small screens */
+    }
+    .single-post-content {
+        padding: 20px; /* Reduce padding on single post for very small screens */
+        margin: 20px auto;
     }
 }
