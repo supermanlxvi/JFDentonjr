@@ -1,0 +1,187 @@
+/* General Body Styles (You should already have this) */
+body {
+    background-color: #1a1a2e; /* Dark purplish-blue */
+    color: #e0e0e0; /* Light grey text */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* A slightly more modern font */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll from overflow */
+}
+
+/* Container for Centering Content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Hero Section Styles */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1500x800/121212/00bcd4?text=FINTECH+DATA+STREAM') no-repeat center center/cover;
+    /* Placeholder for dynamic financial tech background */
+    color: #e0e0e0;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden; /* Important for future animations */
+    min-height: 500px; /* Ensure sufficient height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Dynamic background idea (pure CSS, more advanced): */
+/* You could add a subtle animation for the background here later using pseudo-elements */
+
+.hero-content {
+    z-index: 1; /* Ensure content is above background */
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #00bcd4; /* Accent color */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Subtle shadow for readability */
+}
+
+.hero h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #a0a0a0; /* Slightly lighter than main text */
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    background-color: #00bcd4; /* Accent color */
+    color: #1a1a2e; /* Dark text on accent */
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #008c9e; /* Darker accent on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.button-secondary {
+    background-color: transparent;
+    color: #00bcd4;
+    border: 2px solid #00bcd4;
+}
+
+.button-secondary:hover {
+    background-color: #00bcd4;
+    color: #1a1a2e;
+}
+
+/* About Me Section Styles */
+.about-me {
+    padding: 60px 0;
+    background-color: #2a2a4a; /* Slightly lighter dark background */
+    text-align: center;
+}
+
+.about-me .container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    align-items: center;
+    justify-content: center;
+    gap: 40px; /* Space between image and text */
+}
+
+.about-image img {
+    border-radius: 50%; /* Make image circular */
+    border: 3px solid #00bcd4; /* Accent border */
+    max-width: 200px;
+    height: auto;
+    display: block; /* Remove extra space below image */
+}
+
+.about-text {
+    flex: 1; /* Allow text to take remaining space */
+    max-width: 700px; /* Control max width of text block */
+    text-align: left;
+}
+
+.about-text h3 {
+    font-size: 2em;
+    color: #00bcd4;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+/* Blog and Contact Preview Sections */
+.blog-preview, .contact-preview {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #1a1a2e;
+}
+
+.blog-preview h2, .contact-preview h2 {
+    font-size: 2.5em;
+    color: #00bcd4;
+    margin-bottom: 30px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #12121e; /* Even darker background for footer */
+    color: #a0a0a0;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9em;
+    border-top: 1px solid #2a2a4a; /* Subtle top border */
+}
+
+.footer-links a {
+    color: #00bcd4;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #e0e0e0;
+}
+
+/* Basic Responsiveness (Optional, but good practice for Notepad users) */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+    .hero h2 {
+        font-size: 1.4em;
+    }
+    .hero p {
+        font-size: 1em;
+    }
+    .button {
+        display: block; /* Stack buttons vertically on small screens */
+        margin: 10px auto;
+    }
+    .about-me .container {
+        flex-direction: column; /* Stack image and text vertically */
+    }
+    .about-image {
+        margin-bottom: 20px;
+    }
+    .about-text {
+        text-align: center;
+    }
+}
