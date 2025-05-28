@@ -18,8 +18,7 @@ body {
 
 /* Hero Section Styles */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1500x800/121212/00bcd4?text=FINTECH+DATA+STREAM') no-repeat center center/cover;
-    /* Placeholder for dynamic financial tech background */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('TECH BACKGROUND.png') no-repeat center center/cover;
     color: #e0e0e0;
     text-align: center;
     padding: 100px 20px;
@@ -30,7 +29,6 @@ body {
     align-items: center;
     justify-content: center;
 }
-
 /* Dynamic background idea (pure CSS, more advanced): */
 /* You could add a subtle animation for the background here later using pseudo-elements */
 
